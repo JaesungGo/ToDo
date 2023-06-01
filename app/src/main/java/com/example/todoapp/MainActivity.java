@@ -1,5 +1,6 @@
 package com.example.todoapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -9,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CalendarView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.todoapp.Adapter.ToDoAdapter;
@@ -21,12 +24,16 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnDialogCloseListner {
 
+    private CalendarView calendarView;
     private RecyclerView mRecyclerview;
     private FloatingActionButton fab;
     private FloatingActionButton fdb;
@@ -38,6 +45,24 @@ public class MainActivity extends AppCompatActivity implements OnDialogCloseList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        calendarView = findViewById(R.id.calendarView);
+
+
+        //날짜변환
+        DateFormat formatter = new SimpleDateFormat("yyyy년MM월dd일");
+        Date date = new Date(calendarView.getDate());
+
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                String day;
+                day = year + "년" + (month+1) + "월" + dayOfMonth + "일";
+            }
+
+
+        });
 
         mRecyclerview = findViewById(R.id.recyclerview);
         fab = findViewById(R.id.fab);

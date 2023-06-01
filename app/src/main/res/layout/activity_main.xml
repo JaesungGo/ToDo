@@ -16,12 +16,14 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerview"
         android:layout_below="@id/textview"
-        android:nestedScrollingEnabled="true"/>
+        android:layout_marginTop="338dp"
+        android:nestedScrollingEnabled="true" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fdb"
@@ -46,5 +48,14 @@
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="30dp"
         android:src="@drawable/ic_baseline_add_24" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="32dp" />
 
 </RelativeLayout>
