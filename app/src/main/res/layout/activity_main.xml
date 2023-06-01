@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textview"
-        android:text="To Do Tasks"
-        android:textSize="32sp"
+        android:text="오늘 얼마나 마셨어"
+        android:textSize="20sp"
         android:textColor="#000"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
@@ -22,13 +22,29 @@
         android:id="@+id/recyclerview"
         android:layout_below="@id/textview"
         android:nestedScrollingEnabled="true"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fdb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_baseline_done_all_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:src="@drawable/ic_baseline_add_24"
-        android:layout_margin="30dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_baseline_add_24" />
 
 </RelativeLayout>

@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:buttonTint="@color/colorPrimaryDark"
             android:id="@+id/mcheckbox"
-            android:text="This is Task 1"
+            android:text="오늘의 음주량"
             android:paddingStart="8dp"/>
     </RelativeLayout>
 

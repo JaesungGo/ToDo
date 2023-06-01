@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/edittext"
         android:paddingStart="7dp"
-        android:hint="Enter New Task"
+        android:hint="과도한 음주는 건강에 해롭습니다."
         android:paddingEnd="7dp"/>
 
     <Button

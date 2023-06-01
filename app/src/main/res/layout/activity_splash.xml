@@ -4,22 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorKyotong"
     tools:context=".SplashActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawablePadding="15dp"
+        android:text="뻑이의 금주일기"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="To Do App"
-        android:textColor="@color/colorWhite"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:drawablePadding="15dp"
-        android:drawableRight="@drawable/ic_baseline_done_all_24"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="112dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bbuks" />
+    <!--    android:drawableRight="@drawable/ic_baseline_done_all_24"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
